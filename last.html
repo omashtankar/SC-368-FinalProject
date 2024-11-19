@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Visiting!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F7F5F2;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Framed container for the thank you message */
+        .thank-you-container {
+            text-align: center;
+            padding: 50px 40px;
+            background-color: #FF6F00;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+            z-index: 10;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .thank-you-container h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .thank-you-container p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #FF6F00;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #FF8F00;
+        }
+
+        /* Keyframes for Bouncing Text */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Fade-in effect for the whole container */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Creating Random Floating Food Emojis */
+        .emoji {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.8;
+            animation: float 10s linear infinite;
+            pointer-events: none; /* Prevent emojis from blocking clicks */
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(200px) translateY(100px);
+            }
+            100% {
+                transform: translateX(-200px) translateY(-100px);
+            }
+        }
+
+        /* Randomized duration for each emoji */
+        .emoji:nth-child(odd) {
+            animation-duration: 15s;
+        }
+
+        .emoji:nth-child(even) {
+            animation-duration: 20s;
+        }
+
+        /* Ensuring emojis appear at different sizes and positions */
+        .emoji:nth-child(1) {
+            top: 10%;
+            left: 5%;
+        }
+
+        .emoji:nth-child(2) {
+            top: 15%;
+            left: 30%;
+        }
+
+        .emoji:nth-child(3) {
+            top: 20%;
+            left: 50%;
+        }
+
+        .emoji:nth-child(4) {
+            top: 30%;
+            left: 70%;
+        }
+
+        .emoji:nth-child(5) {
+            top: 45%;
+            left: 10%;
+        }
+
+        .emoji:nth-child(6) {
+            top: 60%;
+            left: 25%;
+        }
+
+        .emoji:nth-child(7) {
+            top: 75%;
+            left: 40%;
+        }
+
+        .emoji:nth-child(8) {
+            top: 85%;
+            left: 55%;
+        }
+
+        .emoji:nth-child(9) {
+            top: 60%;
+            left: 80%;
+        }
+
+        .emoji:nth-child(10) {
+            top: 90%;
+            left: 90%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Food Emojis -->
+    <div class="emoji">🍕</div>
+    <div class="emoji">🍔</div>
+    <div class="emoji">🍩</div>
+    <div class="emoji">🍦</div>
+    <div class="emoji">🍪</div>
+    <div class="emoji">🌮</div>
+    <div class="emoji">🍣</div>
+    <div class="emoji">🍜</div>
+    <div class="emoji">🍕</div>
+    <div class="emoji">🍪</div>
+
+    <!-- Thank You Container -->
+    <div class="thank-you-container">
+        <h1>Thank You for Visiting!</h1>
+        <p>We hope you enjoyed the content and found some tasty recipes!</p>
+        <a href="index.html" class="btn">Go Back</a>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
